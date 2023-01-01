@@ -4,7 +4,7 @@
 
 ### Description
 
-The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent is for this to be a shared document by the community so feel free to add any others to the list. 
+The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use. If you have a suggestion add it to the repo and submit a push request for review.
 
 Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes will be backed up _**BUT**_ volume information will _**NOT**_.  To manually backup any critical volume data use the commands:
  
@@ -13,15 +13,26 @@ Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes 
     
 _The above opens a container volume /dbdata on dbstore for backup to localhost ~/ Update with the input container you are backing up and the output tar location._
 
-## Scripts included and descriptions
+### Set-up
+
+Navigate to home directory. 
+
+cd ~/
+
+Clone the repo.
+
+git clone 
+
+
+### Scripts included and descriptions
 
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
 
 dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes. **_WARNING: Data will be removed in this process!_**
 
-drm.sh - #3 Removes **ALL** things docker including installatio.n **_WARNING: Data will be removed in this process!_**
+drm.sh - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
 
-ddn.sh - #4 Quick install script for docker.
+ddn.sh - #4 Quick install script for docker. Alternate full install manually at http://get.docker.com.
 
 dck.sh - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
 
