@@ -17,6 +17,8 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost ~
 
 Run script using:
 
+	sudo bash ~/dockery/setup.sh
+
 sudo bash ~/dockery/setup.sh
 
 ### Scripts included and descriptions
