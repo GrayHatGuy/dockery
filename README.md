@@ -23,7 +23,7 @@ Run script using:
 
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
 
-dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes. 
+dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
 
 drm.sh - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
