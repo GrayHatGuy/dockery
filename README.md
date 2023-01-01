@@ -15,14 +15,9 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost ~
 
 ### Set-up
 
-Navigate to home directory. 
+Run script using:
 
-cd ~/
-
-Clone the repo.
-
-git clone 
-
+sudo bash ~/dockery/setup.sh
 
 ### Scripts included and descriptions
 
