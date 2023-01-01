@@ -1,6 +1,6 @@
 # dockery
 
-#### bash script shortcuts of repetitive docker tasks to improve workflow efficiency.
+**bash script shortcuts of repetitive docker tasks to improve workflow efficiency.**
 
 ### Description
 
