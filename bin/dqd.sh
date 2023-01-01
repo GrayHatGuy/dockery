@@ -9,13 +9,7 @@ echo "Welcome $name to LinuxHint"
 	## save images
 	docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar
 	## save routes
-	iptables-save > savedrules.txt 
-	## save volumes 
-	## TBD - add loop opens volume /dbdata on dbstore for backup on localhost /backup
-	## docker run -v /dbdata --name dbstore ubuntu /bin/bash
-	## docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
-	## (dnew.sh only)
-	## Add pause and y or n 
+	iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt 
 	## dcl.sh
 	## clear docker
 	docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
@@ -25,7 +19,7 @@ echo "Welcome $name to LinuxHint"
 	## ddn.sh
 	## quick install see https://getdocker.com for full install
 	curl -fsSL https://get.docker.com -o get-docker.sh
-	## dck,sh
+	## dck.sh
 	## check install versions upgrade
 	docker compose version && docker version
 	sudo apt-get upgrade -y && sudo apt-get update -y
