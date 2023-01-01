@@ -19,8 +19,6 @@ Run script using:
 
 	sudo bash ~/dockery/setup.sh
 
-sudo bash ~/dockery/setup.sh
-
 ### Script usage and descriptions
 
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
