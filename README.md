@@ -31,4 +31,4 @@ ddn.sh - #4 Quick install script for docker. Alternate full install manually at 
 
 dck.sh - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
 
-dqd.sh - _**god mode**_ executes all scripts in order listed above. **_WARNING: Data will be removed in this process!_**
+dqd.sh - #1 to #5 _**god mode**_ executes all scripts in order listed above. **_WARNING: Data will be removed in this process!_**
