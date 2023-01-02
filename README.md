@@ -4,7 +4,8 @@
 
 ### Description
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use.
-_If you have a suggestion commit the revisions to the repo and submit a push request for review._
+
+_If you have suggestions for improvements commit your revisions to the repo and submit a push request for review and incorporation._
 
 Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
