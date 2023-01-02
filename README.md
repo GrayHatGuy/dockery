@@ -6,7 +6,7 @@
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use.
 _If you have a suggestion commit the revisions to the repo and submit a push request for review._
 
-Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
+Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
 	docker run -v /dbdata --name dbstore ubuntu /bin/bash
 	docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf ~/backup_volume.tar /dbdata
