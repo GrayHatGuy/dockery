@@ -63,6 +63,8 @@ OR
 ### Description
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
 
+# ☢️ **_WARNING: Data will be removed in this process!_**
+
 #### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - ☢️ **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
@@ -73,7 +75,5 @@ Typical use of the scripts is to execute common docker housekeeping routines for
  
 #### Sequential scripts
 - ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation.  
-
-☢️ **_WARNING: Data will be removed in this process!_**
 
 _!!! For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh !!!_
