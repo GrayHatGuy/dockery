@@ -2,12 +2,12 @@
 
 **bash script shortcuts for repetitive docker tasks to improve workflow efficiency.**
 
-### Description
+## Description
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use.
 
 _If you have suggestions for improvements commit your revisions to the repo and submit a push request for review and incorporation._
 
-### Prerequisites
+## Prerequisites
 Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
 	docker run -v /dbdata --name dbstore ubuntu /bin/bash
@@ -17,13 +17,13 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost .
 
 _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#usage) for flag settings requarding data removal._
 
-### Set-up
+## Set-up
 Creates directory for install, downloads repo. 
 
 	sudo bash ~/dockery/setup.sh 
 
-### Usage
-Scripts can be ran individually or in custom sequences.  
+## Usage
+Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
 
 **To run scripts #1 to #5 separately use the form below.**
 _Script #1 dbu.sh shown as an example._
@@ -60,12 +60,12 @@ OR
 
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
-### Description
-Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
+## Details
+Scripts can be ran individually or in custom sequences. 
 
 # ☢️ **_WARNING: Data will be removed in this process!_**
 
-#### Discrete scripts
+### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - ☢️ **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
@@ -73,7 +73,7 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 - **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
 - **_[dck.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dck.sh)_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
  
-#### Sequential scripts
+## Sequential scripts
 - ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation.  
 
 _!!! For explicit details on the commands used in scripts see embedded comments in [/bin/<script>.sh](https://github.com/GrayHatGuy/dockery/tree/main/bin) !!!_
