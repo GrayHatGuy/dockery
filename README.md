@@ -69,7 +69,7 @@ _Script #1 dbu.sh shown as an example._
 ## Details
 Scripts can be ran individually or in custom sequences. 
 
-## **!!! WARNING: ☢️ indictes data will be removed with these scripts !!!**
+## **!!! WARNING: ☢️ indicates data will be removed with these scripts !!!**
 
 ### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
