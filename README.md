@@ -67,7 +67,7 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
-- **[_drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
+- **_[drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
 - **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
 - **_[dck.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dck.sh)_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
  
