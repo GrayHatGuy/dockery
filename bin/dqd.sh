@@ -1,23 +1,32 @@
 #!/bin/bash
+## ~/dockery/bin/dqd.sh
 
 while getopts 'yn:' OPTION; do
   case "$OPTION" in
     y)
-      echo "y flag detected removing ALL data"
+      echo "Warning: y flag detected removing ALL data."
+      echo "Do you wish to abort? y/n"
+      read abort1
+      if [[ ( $abort1 == "n" ) ]]; then
+      echo "user exit"
+      exit 1
+      else
+      echo "User confirmed data removal flag. No turning back now!"
+      fi
       ;;
     n)
-      echo "n flag detected skipping all data removal"
+      echo "User selected no flag skipping data removal"
       ;;
+    "")
+      echo "[-y] [-n] flag not set default to user prompt for data removal"
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
       exit 1
       ;;
   esac
 done
-
-## dockery - bash scripts for improving docker workflows
 ## dbu.sh 
-## make backup directory in ~/ for images and routes
+echo "create backup directory in ~/dockbkup for images and routes"
 cd ~/ & mkdir /dockbkup ; cd /dockbkup && mkdir img && cd .. ; mkdir routes 
 ## save images
 docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar
@@ -25,14 +34,40 @@ docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar
 iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt 
 echo "Images and Routes are backed up to ~/dockbkup/"
 
-echo "Continue clearing docker? y/n"
-read answer1
-if [[ ( $answer1 == "n" ) ]]; then
-echo "user exit"
-exit
-else
-echo "Clearing docker now..."
-fi
+
+
+while getopts 'yn:' OPTION; do
+  case "$OPTION" in
+    y)
+      ## dcl.sh
+      ## clear docker
+      docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
+      echo "docker cleared!"
+      docker ps
+      ;;
+    n)
+      echo "User selected no flag skipping data removal"
+      ;;
+    "")
+      echo "Continue clearing docker? y/n"
+      read answer1
+      if [[ ( $answer1 == "n" ) ]]; then
+      echo "Skipping docker clear"
+      else
+      echo "Clearing docker now..."
+      ## dcl.sh
+      ## clear docker
+      docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
+      echo "docker cleared!"
+      docker ps
+      fi
+    ?)
+      echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
+      exit 1
+      ;;
+  esac
+done
+
 
 ## dcl.sh
 ## clear docker
