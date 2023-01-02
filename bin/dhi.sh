@@ -10,7 +10,7 @@ if [[ ( $status == "n" ) ]]; then
 echo "good-bye"
 else
 ## dok.sh - docker install status check
-docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
+docker ps && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 if [ $? -eq 0 ] 
 then 
   echo "docker check AOK - happy dockering!' 
