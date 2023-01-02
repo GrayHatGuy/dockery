@@ -3,7 +3,8 @@
 **bash script shortcuts for repetitive docker tasks to improve workflow efficiency.**
 
 ### Description
-The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use. If you have a suggestion add it to the repo and submit a push request for review.
+The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use.
+_If you have a suggestion commit the revisions to the repo and submit a push request for review._
 
 Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
@@ -19,7 +20,8 @@ Run script using:
 	sudo bash ~/dockery/setup.sh 
 
 ### Usage
-**To run scripts #1 to #5 separately use the form below. Script #1 dbu.sh shown as an example.**
+**To run scripts #1 to #5 separately use the form below.**
+_Script #1 dbu.sh shown as an example._
 
 	sudo ./dbu.sh ## short hand
 	
@@ -54,13 +56,16 @@ OR
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
-- dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
-- dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes.
+Discrete scripts
+- **_dbu.sh_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
+- **_dcl.sh_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
-drm.sh - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
-ddn.sh - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
-dck.sh - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
-dqd.sh - #1 to #5 _**god mode**_ executes all scripts in order listed above. **_WARNING: Data will be removed in this process!_**
+- **_drm.sh_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
+- **_ddn.sh _** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
+-**_dck.sh_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
+
+Sequential scripts
+- **_dqd.sh_** - #1 to #5  _**god mode**_ executes all scripts {*.sh(i) for i = 1 to n; where n =5} in order listed above. **_WARNING: Data will be removed in this process!_**
 
 
 ***For explicit details on the commands used in scripts see embedded comments in /bin/*.sh***
