@@ -76,4 +76,4 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 #### Sequential scripts
 - ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation.  
 
-_!!! For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh !!!_
+_!!! For explicit details on the commands used in scripts see embedded comments in [/bin/<script>.sh](https://github.com/GrayHatGuy/dockery/tree/main/bin) !!!_
