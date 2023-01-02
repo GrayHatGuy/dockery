@@ -18,7 +18,10 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost .
 _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-flag-usage) for data removal script flagsl._
 
 ## Set-up
-Creates directory for install, downloads repo. 
+Creates directory for install and download repo. 
+```sudo ./dbu.sh ## short hand```
+OR if the above fails verify ~/dockery/bin is included in the path or use
+```sudo bash ~/dockery/setup.sh```
 
 
 
@@ -29,11 +32,8 @@ Creates directory for install, downloads repo.
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
 
 #### **To run scripts #1 to #5 separately use the form below.**
-
-	
+_Script #1 dbu.sh shown as an example._
 	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
-		
-	
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 
