@@ -69,4 +69,4 @@ OR
 - **_dqd.sh_** - #1 to #5  _**god mode**_ executes all scripts {*.sh(i) for i = 1 to n; where n =5} in order listed above. Ideal for a factory reset and install of docker. **_WARNING: Data will be removed in this process!_**
 
 
-#### For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh
+_#### For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh_
