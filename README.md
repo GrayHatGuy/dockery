@@ -22,7 +22,7 @@ Run script using:
 ### Script usage and descriptions
 
 #### Usage
-To run scripts #1 to #5 separately use the form. Using #1 dbu.sh as example.
+To run scripts #1 to #5 separately use the form below. Script #1 dbu.sh shown as an example.
 
 	sudo ./dbu.sh
 	
@@ -30,11 +30,21 @@ _If the above short hand syntax fails confirm installation was performed per set
 	
 	sudo bash /$HOME/dockery/bin/dbu.sh
 	
-To run the all scripts in sequence per dqd.sh use the following options:
+To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:
 	
-	sudo bash ~/dockery/dqd.sh [-y] [-n]
-	sudo bash ~/dockery/dqd.sh [-y] [-n]
-	sudo bash ~/dockery/dqd.sh [-y] [-n] 
+	Null flag set - Prompt user before data removal:
+	
+	sudo ./ddq.sh 
+	<OR>
+	sudo bash ~/dockery/dqd.sh 
+	
+	Flag set to accept all data removal [-y]
+	
+	sudo bash ~/dockery/dqd.sh -y
+	
+	Flag set for NO data removal
+	
+	sudo bash ~/dockery/dqd.sh -n 
 	
 ### Description
 
