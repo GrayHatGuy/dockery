@@ -61,7 +61,7 @@ OR
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
-Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
+Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
 
 #### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
@@ -72,7 +72,7 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 - **_dck.sh_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
  
 #### Sequential scripts
-- **_dqd.sh_** - #1 to #5  _**god mode**_ executes all scripts {*.sh(i) for i = 1 to n; where n =5} in order listed above. Ideal for a factory reset and install of docker. **_WARNING: Data will be removed in this process!_**
+- **_dqd.sh_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation. **_WARNING: Data will be removed in this process!_**
 
 
 _For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh_
