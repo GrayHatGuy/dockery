@@ -33,7 +33,7 @@ _If the above short hand syntax fails confirm installation was performed per set
 	
 **To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
 	
-No flag set - Prompt user before data removal [""]
+Omitted flag - Prompt user before data removal [""]
 	
 	sudo ./ddq.sh ## short hand
 	
@@ -41,13 +41,13 @@ OR
 	
 	sudo bash ~/dockery/dqd.sh ## literal path
 	
-Flag set to accept all data removal [-y]
+Yes flag - Accept data removal without prompts [-y]
 	
 	sudo ./ddq.sh -y ## short hand
 	
 	sudo bash ~/dockery/dqd.sh -y ## literal path
 	
-Flag set for NO data removal [-n]
+No flag - Bypass data removal and prompts [-n]
 	
 	sudo bash ./dqd.sh -n ## short hand
 OR
