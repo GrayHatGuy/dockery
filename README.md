@@ -13,7 +13,7 @@ Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and rou
     
 _The above opens a container volume /dbdata on dbstore for backup to localhost ./$HOME/ Verify the output tar location and containerID before executing._
 
-_See script [[#Usage](https://github.com/GrayHatGuy/dockery/edit/main/README.md#usage)] user prompt settings for data deletion._
+_See script [Usage(https://github.com/GrayHatGuy/dockery/edit/main/README.md#usage)] user prompt settings for data deletion._
 
 ### Set-up
 Run script using:
