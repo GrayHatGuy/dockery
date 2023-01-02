@@ -17,34 +17,40 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost ~
 
 Run script using:
 
-	sudo bash ~/dockery/setup.sh
+	sudo bash ~/dockery/setup.sh 
 
 ### Script usage and descriptions
 
 #### Usage
-To run scripts #1 to #5 separately use the form below. Script #1 dbu.sh shown as an example.
+**To run scripts #1 to #5 separately use the form below. Script #1 dbu.sh shown as an example.**
 
-	sudo ./dbu.sh
+	sudo ./dbu.sh ## short hand
 	
 _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
 	
-	sudo bash /$HOME/dockery/bin/dbu.sh
+	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
 	
-To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:
+**To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
 	
-	Null flag set - Prompt user before data removal:
+No flag set - Prompt user before data removal [""]
 	
-	sudo ./ddq.sh 
-	<OR>
-	sudo bash ~/dockery/dqd.sh 
+	sudo ./ddq.sh ## short hand
 	
-	Flag set to accept all data removal [-y]
+OR
 	
-	sudo bash ~/dockery/dqd.sh -y
+	sudo bash ~/dockery/dqd.sh ## literal path
 	
-	Flag set for NO data removal
+Flag set to accept all data removal [-y]
 	
-	sudo bash ~/dockery/dqd.sh -n 
+	sudo ./ddq.sh -y ## short hand
+	
+	sudo bash ~/dockery/dqd.sh -y ## literal path
+	
+Flag set for NO data removal [-n]
+	
+	sudo bash ./dqd.sh -n ## short hand
+OR
+	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
 
