@@ -1,5 +1,37 @@
 #!/bin/bash
-echo "Enter Your Name"
+#!/bin/bash
+
+while getopts 'yn:' OPTION; do
+  case "$OPTION" in
+    y)
+      echo "y flag detected removing data"
+      ;;
+    n)
+      echo "n flag detected skipping all data removal"
+      ;;
+    #!/bin/bash
+
+while getopts 'lha:' OPTION; do
+  case "$OPTION" in
+    l)
+      echo "linuxconfig"
+      ;;
+    h)
+      echo "you have supplied the -h option"
+      ;;
+    a)
+      avalue="$OPTARG"
+      echo "The value provided is $OPTARG"
+      ;;
+    ?)
+      echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
+      exit 1
+      ;;
+  esac
+done
+shift "$(($OPTIND -1))"
+
+
 ## dockery - bash scripts for improving docker workflows
 ## dbu.sh 
 ## make backup directory in ~/ for images and routes
