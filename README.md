@@ -7,6 +7,7 @@ The following scripts automate routine tasks associated with docker composition 
 
 _If you have suggestions for improvements commit your revisions to the repo and submit a push request for review and incorporation._
 
+### Prerequisites
 Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
 	docker run -v /dbdata --name dbstore ubuntu /bin/bash
