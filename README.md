@@ -55,14 +55,12 @@ OR
 	
 ### Description
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
-
 dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
-
 drm.sh - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
-
 ddn.sh - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
-
 dck.sh - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
-
 dqd.sh - #1 to #5 _**god mode**_ executes all scripts in order listed above. **_WARNING: Data will be removed in this process!_**
+
+
+***For explicit details on the commands used in scripts see embedded comments in /bin/*.sh***
