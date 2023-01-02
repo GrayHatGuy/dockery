@@ -27,17 +27,9 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 
 #### **To run scripts #1 to #5 separately use the form below.**
 
-     _Script #1 dbu.sh shown as an example._
-     
-
-	```sudo ./dbu.sh ## short hand```
 	
-	
-     _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
-     
-	
-	```sudo bash /$HOME/dockery/bin/dbu.sh ## literal path```
-	
+	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
+		
 	
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
@@ -82,3 +74,14 @@ Scripts can be ran individually or in custom sequences.
 - ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation.  
 
 _!!! For explicit details on the commands used in scripts see embedded comments in [/bin/<script>.sh](https://github.com/GrayHatGuy/dockery/tree/main/bin) !!!_
+
+
+
+     _Script #1 dbu.sh shown as an example._
+     
+
+	```sudo ./dbu.sh ## short hand```
+	
+	
+     _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
+     
