@@ -25,9 +25,8 @@ while getopts 'yn:' OPTION; do
       ;;
   esac
 done
-
 ## dbu.sh  mkdir backup all images and routes
-echo "create backup directory in ~/dockbkup for images and routes" ; sudo cd ~/ & mkdir /dockbkup ; cd /dockbkup && sudo mkdir img && cd .. ; mkdir routes ; docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar ; iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt && echo "Images and routes are back up to ~/dockbkup/"
+echo "create backup directory in ~/dockbkup for images and routes" ; sudo cd ~/ & mkdir /dockbkup ; cd /dockbkup && sudo mkdir img && cd .. ; mkdir routes ; docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar ; iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt && echo "Images and routes are backed up to ~/dockbkup/"
 while getopts 'yn:' OPTION; do
   case "$OPTION" in
     y)
@@ -51,13 +50,10 @@ while getopts 'yn:' OPTION; do
       ;;
   esac
 done
-
-### begin flag filter
-
+## ddn.sh using quick install see https://getdocker.com for full install apt refresh reinstall docker add user to group and docker to systemctl
 while getopts 'yn:' OPTION; do
   case "$OPTION" in
     y)
-      ## ddn.sh using quick install see https://getdocker.com for full install apt refresh reinstall docker add user to group and docker to systemctl
       echo "*-y flag docker nuke and reinstall*" ; echo "nuking docker..." ; sudo dpkg -l | grep -i docker ; sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin && sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-compose-plugin sudo rm -rf /var/lib/docker /etc/docker && sudo rm /etc/apparmor.d/docker && sudo groupdel docker && sudo rm -rf /var/run/docker.sock && echo "...nuked! Now re-installing..." ; sudo apt-get update -y && sudo apt-get upgrade -y ; sudo curl -fsSL https://get.docker.com -o get-docker.sh && sudo bash get-docker.sh && sudo apt-get upgrade -y && sudo apt-get update -y ; sudo usermod -aG docker $USER ; sudo systemctl enable docker.service && sudo systemctl enable containerd.service && echo "docker installed!"
       ;;
     n)
@@ -78,12 +74,11 @@ while getopts 'yn:' OPTION; do
       ;;
   esac
 done
-
-## dhi.sh - docker hello verify install and status
-hello world 
-docker run hello-world
-docker ps
-docker volume ls
-docker networks ls
-docker images
-iptables
+## dhi.sh - docker hello world status and install verification
+docker run hello-world && docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
+if [ $? -eq 0 ] 
+then 
+  echo "docker is good to go!'" 
+else 
+  echo "docker failed status check error status return for dhi.sh script" >&2 
+fi
