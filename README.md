@@ -33,7 +33,11 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 
 #### **To run scripts #1 to #5 separately use the form below.**
 _Script #1 dbu.sh shown as an example._
+	
+	sudo bash ./dbu.sh ## short path
 
+##### OR	
+	
 	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
 	
 ### Script flag usage
@@ -41,7 +45,7 @@ _Script #1 dbu.sh shown as an example._
 
 #### Omitted flag - Prompt user before data removal [""]
 	
-	sudo ./ddq.sh ## short hand
+	sudo ./ddq.sh ## short path
 	
 ##### OR
 	
@@ -49,7 +53,7 @@ _Script #1 dbu.sh shown as an example._
 	
 #### Yes flag - Accept data removal without prompts [-y]
 	
-	sudo ./ddq.sh -y ## short hand
+	sudo ./ddq.sh -y ## short path
 	
 ##### OR
 	
@@ -57,7 +61,7 @@ _Script #1 dbu.sh shown as an example._
 	
 #### No flag - Bypass data removal and prompts [-n]
 	
-	sudo bash ./dqd.sh -n ## short hand
+	sudo bash ./dqd.sh -n ## short path
 	
 ##### OR
 
