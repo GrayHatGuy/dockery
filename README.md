@@ -26,7 +26,7 @@ To run scripts #1 to #5 separately use the form. Using #1 dbu.sh as example.
 
 	sudo ./dbu.sh
 	
-If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:
+_If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
 	
 	sudo bash /$HOME/dockery/bin/dbu.sh
 	
