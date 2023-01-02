@@ -76,7 +76,7 @@ while getopts 'yn:' OPTION; do
 done
 ## dhi.sh - docker hello world
 echo "Hello-world starting rn..."
-docker run hello-world && 
+docker run hello-world 
 ## dok.sh - docker install status check
 docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 if [ $? -eq 0 ] 
