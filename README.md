@@ -64,7 +64,7 @@ _If the above short hand syntax fails confirm installation was performed per set
 ## Details
 Scripts can be ran individually or in custom sequences. 
 
-# **WARNING:**  **☢️** _**indictes data will be removed with these scripts!**_
+# **WARNING:**  **☢️ indictes data will be removed with these scripts!**
 
 ### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
