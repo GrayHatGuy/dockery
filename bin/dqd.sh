@@ -74,8 +74,11 @@ while getopts 'yn:' OPTION; do
       ;;
   esac
 done
-## dhi.sh - docker hello world status and install verification
-docker run hello-world && docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
+## dhi.sh - docker hello world
+echo "Hello-world starting rn..."
+docker run hello-world && 
+## dok.sh - docker install status check
+docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 if [ $? -eq 0 ] 
 then 
   echo "docker is good to go!'" 
