@@ -76,8 +76,8 @@ Scripts can be ran individually or in custom sequences.
 - ☢️ **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
 - ☢️ **_[drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Nuke **ALL** things docker including installation prerequisite #2.
 - **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com prequisite #2 and #3. Do not perform if docker is installed. 
-- **_[dhi.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dhi.sh)_** - #5 Default run image hello-world or user specified verify with ps check #6 optional.
-- **_[dok.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dok.sh)_** - #6 Check apt update/upgrade docker engine and compose versions list network images and containers. 
+- **_[dhi.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dhi.sh)_** - #5 Default run image hello-world or user specified continue with #6 optional.
+- **_[dok.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dok.sh)_** - #6 Check apt update/upgrade docker engine and compose versions list processes network images and containers. 
 
  
 ## Sequential scripts
