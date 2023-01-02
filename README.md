@@ -34,10 +34,10 @@ _If the above short hand syntax fails confirm installation was performed per set
 	
 	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
 	
-#### **To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
+#### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 
 ### Script flag usage
-
+#### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 #### Omitted flag - Prompt user before data removal [""]
 	
 	sudo ./ddq.sh ## short hand
