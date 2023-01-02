@@ -1,6 +1,6 @@
 # dockery
 
-**bash script shortcuts for repetitive docker tasks to improve workflow efficiency.**
+**bash script shortcuts for repetitive docker tasks to improve workflow efficiency during container composition.**
 
 ## Description
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use.
@@ -65,7 +65,7 @@ _If the above short hand syntax fails confirm installation was performed per set
 ## Details
 Scripts can be ran individually or in custom sequences. 
 
-# **WARNING:**  **☢️ indictes data will be removed with these scripts!**
+# **!!!!!!!!!!!!!!!!!!!!!! WARNING: ☢️ indictes data will be removed with these scripts! !!!!!!!!!!!!!!!!!!!!!!**
 
 ### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
