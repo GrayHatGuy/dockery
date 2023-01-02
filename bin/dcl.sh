@@ -1,5 +1,5 @@
 #!/bin/bash
-## ~/dockery/bin/dqd.sh
+## ~/dockery/bin/dcl.sh
 echo "Starting " $(basename) 
 echo "Clearing docker do you wish to continue? y/n" && read abort1
 if [[ ( $abort1 == "n" ) ]]; then
