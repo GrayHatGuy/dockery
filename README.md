@@ -20,6 +20,8 @@ _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-fl
 ## Set-up
 Creates directory for install, downloads repo. 
 
+	sudo ./dbu.sh ## short hand
+
 
 	sudo bash ~/dockery/setup.sh 
 	
@@ -27,7 +29,7 @@ Creates directory for install, downloads repo.
 
     
 
-	sudo ./dbu.sh ## short hand
+	
 
 	
      _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
