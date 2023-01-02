@@ -25,7 +25,7 @@ Creates directory for install, downloads repo.
 ## Usage
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
 
-**To run scripts #1 to #5 separately use the form below.**
+### **To run scripts #1 to #5 separately use the form below.**
 _Script #1 dbu.sh shown as an example._
 
 	sudo ./dbu.sh ## short hand
@@ -34,29 +34,29 @@ _If the above short hand syntax fails confirm installation was performed per set
 	
 	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
 	
-**To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
+### **To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
 
-Omitted flag - Prompt user before data removal [""]
+### Omitted flag - Prompt user before data removal [""]
 	
 	sudo ./ddq.sh ## short hand
 	
-OR
+#### OR
 	
 	sudo bash ~/dockery/dqd.sh ## literal path
 	
-Yes flag - Accept data removal without prompts [-y]
+### Yes flag - Accept data removal without prompts [-y]
 	
 	sudo ./ddq.sh -y ## short hand
 	
-OR
+#### OR
 	
 	sudo bash ~/dockery/dqd.sh -y ## literal path
 	
-No flag - Bypass data removal and prompts [-n]
+### No flag - Bypass data removal and prompts [-n]
 	
 	sudo bash ./dqd.sh -n ## short hand
 	
-OR
+#### OR
 
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
