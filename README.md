@@ -68,8 +68,8 @@ Scripts can be ran individually or in custom sequences.
 ### Discrete scripts
 - **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - ☢️ **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
-- ☢️ **_[drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Removes **ALL** things docker including installation.
-- **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
+- ☢️ **_[drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Nuke **ALL** things docker including installation prerequisite #2.
+- **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com prequisite #2 and #3. Do not perform if docker is installed. 
 - **_[dck.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dck.sh)_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
  
 ## Sequential scripts
