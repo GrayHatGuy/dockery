@@ -63,7 +63,7 @@ OR
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
 
 #### Discrete scripts
-- **_dbu.sh_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
+- **_[dbu.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dbu.sh)_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - **_dcl.sh_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
 - **_drm.sh_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
