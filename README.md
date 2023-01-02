@@ -77,7 +77,8 @@ Scripts can be ran individually or in custom sequences.
 - ☢️ **_[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh)_** - #2 Cleans docker removes containers images then prunes network and volumes.
 - ☢️ **_[drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_** - #3 Nuke **ALL** things docker including installation prerequisite #2.
 - **_[ddn.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/ddn.sh)_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com prequisite #2 and #3. Do not perform if docker is installed. 
-- **_[dck.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dck.sh)_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
+- **_[dck.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dck.sh)_** - #5 Check apt update/upgrade docker engine and compose versions list network images and containers. 
+- **_[dhi.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dhi.sh)_** - #6 Default run image hello-worls or user specified verify with ps check.
  
 ## Sequential scripts
-- ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #5  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =5}. Ideal for a nuking your install of docker and starting with a clean foundation.  
+- ☢️ **_[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_** - #1 to #6  Factory reset. _**god mode**_ executes all scripts in their order listed above {*.sh(i) for i = 1 to n; where n =6}. Ideal for nuking your install of docker and starting with a clean foundation.  
