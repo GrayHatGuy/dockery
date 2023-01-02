@@ -11,8 +11,9 @@ Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes 
 	docker run -v /dbdata --name dbstore ubuntu /bin/bash
 	docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf ~/backup_volume.tar /dbdata
     
-_The above opens a container volume /dbdata on dbstore for backup to localhost ~/ Update with the input container you are backing up and the output tar location._
-_See Script usage for flag settings to prompt user before deletions._
+_The above opens a container volume /dbdata on dbstore for backup to localhost ./$HOME/ Verify the output tar location and containerID before executing._
+
+_See script usage user prompt settings for data deletion._
 
 ### Set-up
 Run script using:
