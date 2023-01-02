@@ -1,8 +1,12 @@
-
-
+#!/bin/bash
+## ~/dockery/bin/dhi.sh
+echo "Starting " $(basename) 
 ## dhi.sh - docker hello world
 echo "Hello-world starting rn..."
-docker run hello-world 
+docker run hello-world
+echo "Status update?"
+read status
+
 ## dok.sh - docker install status check
 docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 if [ $? -eq 0 ] 
