@@ -22,15 +22,19 @@ Creates directory for install, downloads repo.
 
 
 	sudo bash ~/dockery/setup.sh 
+	
+	
 
+    
 
-Script #1 dbu.sh shown as an example._
-     
-
-	```sudo ./dbu.sh ## short hand```
+	sudo ./dbu.sh ## short hand
 
 	
      _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
+     
+     
+Script #1 dbu.sh shown as an example.
+ 
      
 ## Usage
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
