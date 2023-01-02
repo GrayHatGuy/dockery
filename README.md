@@ -21,6 +21,8 @@ Run script using:
 	sudo bash ~/dockery/setup.sh 
 
 ### Usage
+Scripts can be ran individually or in custom sequences.  
+
 **To run scripts #1 to #5 separately use the form below.**
 _Script #1 dbu.sh shown as an example._
 
