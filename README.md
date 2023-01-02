@@ -59,6 +59,8 @@ OR
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
+Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines. 
+
 #### Discrete scripts
 - **_dbu.sh_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - **_dcl.sh_** - #2 Cleans docker removes containers images then prunes network and volumes.
