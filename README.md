@@ -16,7 +16,7 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost .
 _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#usage) for flag settings requarding data removal._
 
 ### Set-up
-Run script using:
+Creates directory for install, downloads repo. 
 
 	sudo bash ~/dockery/setup.sh 
 
