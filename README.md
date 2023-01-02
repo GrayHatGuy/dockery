@@ -3,7 +3,6 @@
 **bash script shortcuts of repetitive docker tasks to improve workflow efficiency.**
 
 ### Description
-
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use. If you have a suggestion add it to the repo and submit a push request for review.
 
 Scripts that _**REMOVE DATA**_ are: dcl.sh drm.sh and dqd.sh. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
@@ -15,14 +14,11 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost ~
 _See Script usage for flag settings to prompt user before deletions._
 
 ### Set-up
-
 Run script using:
 
 	sudo bash ~/dockery/setup.sh 
 
-### Script usage and descriptions
-
-#### Usage
+### Usage
 **To run scripts #1 to #5 separately use the form below. Script #1 dbu.sh shown as an example.**
 
 	sudo ./dbu.sh ## short hand
@@ -58,7 +54,6 @@ OR
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
-
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
 
 dcl.sh - #2 Cleans docker removes containers images then prunes network and volumes.
