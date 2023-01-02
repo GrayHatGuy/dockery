@@ -13,7 +13,7 @@ else
 docker ps && && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 if [ $? -eq 0 ] 
 then 
-  echo "docker is good to go!'" 
+  echo "docker check AOK - happy dockering!' 
 else 
   echo "docker failed status check error status return for dhi.sh script" >&2 
 fi
