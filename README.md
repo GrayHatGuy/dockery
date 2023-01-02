@@ -28,12 +28,16 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 #### **To run scripts #1 to #5 separately use the form below.**
 
      _Script #1 dbu.sh shown as an example._
+     
 
 	```sudo ./dbu.sh ## short hand```
 	
+	
      _If the above short hand syntax fails confirm installation was performed per setup.sh and verify that ~/dockery/bin is added to $PATH otherwise try the following syntax with a literal path:_
+     
 	
 	```sudo bash /$HOME/dockery/bin/dbu.sh ## literal path```
+	
 	
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
