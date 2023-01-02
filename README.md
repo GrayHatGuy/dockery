@@ -15,7 +15,7 @@ Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and rou
     
 _The above opens a container volume /dbdata on dbstore for backup to localhost ./$HOME/ Verify the output tar location and containerID before executing._
 
-_See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#usage) for flag settings requarding data removal._
+_See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-flag-usage) for data removal script flagsl._
 
 ## Set-up
 Creates directory for install, downloads repo. 
