@@ -23,14 +23,19 @@ Run script using:
 
 #### Usage
 To run scripts #1 to #5 separately use the form. Using #1 dbu.sh as example.
+
 	sudo ./dbu.sh
+	
 If the above syntax fails verify setup was performed per setup.sh and verify that ~/dockery/bin is added to $PATH or try the following syntax with a literal path:
+	
 	sudo bash /$HOME/dockery/bin/dbu.sh
 	
 To run the all scripts in sequence per dqd.sh use the following options:
+	
 	sudo bash ~/dockery/dqd.sh [-y] [-n]
 	sudo bash ~/dockery/dqd.sh [-y] [-n]
 	sudo bash ~/dockery/dqd.sh [-y] [-n] 
+	
 ### Description
 
 dbu.sh - #1 Backup all images and ifconfig routes to ~/dockbkup/
