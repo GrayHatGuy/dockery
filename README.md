@@ -57,16 +57,16 @@ OR
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
-Discrete scripts
+#### Discrete scripts
 - **_dbu.sh_** - #1 Backup all images and ifconfig routes to ~/dockbkup/
 - **_dcl.sh_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
 - **_drm.sh_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
 - **_ddn.sh_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
 - **_dck.sh_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
-
-Sequential scripts
+ 
+#### Sequential scripts
 - **_dqd.sh_** - #1 to #5  _**god mode**_ executes all scripts {*.sh(i) for i = 1 to n; where n =5} in order listed above. Ideal for a factory reset and install of docker. **_WARNING: Data will be removed in this process!_**
 
 
-For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh
+#### For explicit details on the commands used in scripts see embedded comments in /bin/<script>.sh
