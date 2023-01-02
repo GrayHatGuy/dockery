@@ -45,12 +45,16 @@ Yes flag - Accept data removal without prompts [-y]
 	
 	sudo ./ddq.sh -y ## short hand
 	
+OR
+	
 	sudo bash ~/dockery/dqd.sh -y ## literal path
 	
 No flag - Bypass data removal and prompts [-n]
 	
 	sudo bash ./dqd.sh -n ## short hand
+	
 OR
+
 	sudo bash ~/dockery/dqd.sh -n ## literal path
 	
 ### Description
