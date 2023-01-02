@@ -1,6 +1,6 @@
 # dockery
 
-**bash script shortcuts of repetitive docker tasks to improve workflow efficiency.**
+**bash script shortcuts for repetitive docker tasks to improve workflow efficiency.**
 
 ### Description
 The following scripts automate routine tasks associated with docker composition and container devlepment. Basically they are transcribed from a docker cheat sheet I have been compiling. The intent of this repo is to provide a controlled list of docker shortcuts for community use. If you have a suggestion add it to the repo and submit a push request for review.
@@ -28,7 +28,6 @@ _If the above short hand syntax fails confirm installation was performed per set
 	sudo bash /$HOME/dockery/bin/dbu.sh ## literal path
 	
 **To run the all scripts in sequence per dqd.sh use the following syntax for data removal prompts:**
-	
 Omitted flag - Prompt user before data removal [""]
 	
 	sudo ./ddq.sh ## short hand
