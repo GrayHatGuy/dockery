@@ -62,7 +62,7 @@ Discrete scripts
 - **_dcl.sh_** - #2 Cleans docker removes containers images then prunes network and volumes.
 	**_WARNING: Data will be removed in this process!_**
 - **_drm.sh_** - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
-- **_ddn.sh _** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
+- **_ddn.sh_** - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
 - **_dck.sh_** - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
 
 Sequential scripts
