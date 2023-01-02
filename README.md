@@ -8,7 +8,7 @@ The following scripts automate routine tasks associated with docker composition 
 _If you have suggestions for improvements commit your revisions to the repo and submit a push request for review and incorporation._
 
 ## Prerequisites
-_**!!! docker disk volume information WILL NOT be backed up these scripts only backs up images and routes!!!**_
+_**!!! docker disk volume information WILL NOT be backed up the scripts only back up images and routes!!!**_
 
 Scripts that _**REMOVE DATA**_ are: _[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh) [drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_ and _[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_. 
 
