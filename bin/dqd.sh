@@ -1,66 +1,77 @@
 #!/bin/bash
 ## ~/dockery/bin/dqd.sh
-
+echo "Starting " $(basename) 
+## check script flags kill bad flags ask again to delete data
 while getopts 'yn:' OPTION; do
   case "$OPTION" in
     y)
-      echo "Warning: y flag detected removing ALL data."
-      echo "Do you wish to abort? y/n"
-      read abort1
+      echo "Warning: -y flag detected removing ALL data." ; echo "Do you wish to continue? y/n" && read abort1
       if [[ ( $abort1 == "n" ) ]]; then
-      echo "user exit"
+      echo "*user abort*"
       exit 1
       else
-      echo "User confirmed data removal flag. No turning back now!"
+      echo "*User confirmed data removal flag.*"
       fi
       ;;
     n)
-      echo "User selected no flag skipping data removal"
+      echo "-n flag skipping data removal"
       ;;
     "")
       echo "[-y] [-n] flag not set default to user prompt for data removal"
+      ;;
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
       exit 1
       ;;
   esac
 done
-## dbu.sh 
-echo "create backup directory in ~/dockbkup for images and routes"
-cd ~/ & mkdir /dockbkup ; cd /dockbkup && mkdir img && cd .. ; mkdir routes 
-## save images
-docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar
-## save routes
-iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt 
-echo "Images and Routes are backed up to ~/dockbkup/"
 
+## dbu.sh  mkdir backup all images and routes
+echo "create backup directory in ~/dockbkup for images and routes" ; sudo cd ~/ & mkdir /dockbkup ; cd /dockbkup && sudo mkdir img && cd .. ; mkdir routes ; docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar ; iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt && echo "Images and routes are back up to ~/dockbkup/"
+while getopts 'yn:' OPTION; do
+  case "$OPTION" in
+    y)
+      ## dcl.sh clear docker stop containers remove images prune network and volumes
+      echo "*-y flag clearing docker...*" ; docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune && echo "...cleared!" ; docker ps
+      ;;
+    n)
+      echo "*-n flag skipping docker clear*"
+      ;;
+    "")
+      echo "Continue clearing docker? y/n" ; read answer1
+      if [[ ( $answer1 == "n" ) ]]; then
+      echo "*user skip docker clear*"
+      else
+      echo "user clearing docker..." ; docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune && echo "...cleared!" ; docker ps
+      fi
+      ;;
+    ?)
+      echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
+      exit 1
+      ;;
+  esac
+done
 
+### begin flag filter
 
 while getopts 'yn:' OPTION; do
   case "$OPTION" in
     y)
-      ## dcl.sh
-      ## clear docker
-      docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
-      echo "docker cleared!"
-      docker ps
+      ## ddn.sh using quick install see https://getdocker.com for full install apt refresh reinstall docker add user to group and docker to systemctl
+      echo "*-y flag docker nuke and reinstall*" ; echo "nuking docker..." ; sudo dpkg -l | grep -i docker ; sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin && sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-compose-plugin sudo rm -rf /var/lib/docker /etc/docker && sudo rm /etc/apparmor.d/docker && sudo groupdel docker && sudo rm -rf /var/run/docker.sock && echo "...nuked! Now re-installing..." ; sudo apt-get update -y && sudo apt-get upgrade -y ; sudo curl -fsSL https://get.docker.com -o get-docker.sh && sudo bash get-docker.sh && sudo apt-get upgrade -y && sudo apt-get update -y ; sudo usermod -aG docker $USER ; sudo systemctl enable docker.service && sudo systemctl enable containerd.service && echo "docker installed!"
       ;;
     n)
-      echo "User selected no flag skipping data removal"
+      echo "*-n flag skipping docker nuke and reinstall*"
       ;;
     "")
-      echo "Continue clearing docker? y/n"
-      read answer1
-      if [[ ( $answer1 == "n" ) ]]; then
-      echo "Skipping docker clear"
+      echo "Continue docker nuke and reinstall? y/n" && read answer2
+      if [[ ( $answer2 == "n" ) ]]; then
+      echo "*user select skipping docker nuke*"
       else
-      echo "Clearing docker now..."
-      ## dcl.sh
-      ## clear docker
-      docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
-      echo "docker cleared!"
-      docker ps
+      ## ddn.sh using quick install see https://getdocker.com for full install apt refresh reinstall docker add user to group and docker to systemctl
+      echo "*user select docker nuke* Now nuking docker..." ; sudo dpkg -l | grep -i docker ; sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin && sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-compose-plugin sudo rm -rf /var/lib/docker /etc/docker && sudo rm /etc/apparmor.d/docker && sudo groupdel docker && sudo rm -rf /var/run/docker.sock && echo "...nuked!" ; echo "re-installing..." ; sudo apt-get update -y && sudo apt-get upgrade -y ; sudo curl -fsSL https://get.docker.com -o get-docker.sh && sudo bash get-docker.sh && sudo apt-get upgrade -y && sudo apt-get update -y ; sudo usermod -aG docker $USER ; sudo systemctl enable docker.service && sudo systemctl enable containerd.service && echo "docker installed!"
       fi
+      ;;
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
       exit 1
@@ -68,41 +79,11 @@ while getopts 'yn:' OPTION; do
   esac
 done
 
-
-## dcl.sh
-## clear docker
-docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune
-echo "docker cleared!"
-docker ps
-
-echo "Do you want to remove everything docker including install? y/n or <ctrl> + c to quit"
-read answer2
-if [[ ( $answer2 == "n" ) ]]; then
-echo "user exit"
-exit
-else
-echo "Nuking everything docker now..."
-fi
-
-## drm.sh 
-## Remove everything docker 
-sudo dpkg -l | grep -i docker ; sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin && sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-compose-plugin sudo rm -rf /var/lib/docker /etc/docker && sudo rm /etc/apparmor.d/docker && sudo groupdel docker && sudo rm -rf /var/run/docker.sock
-
-echo "Do you want to re-install docker? y/n or <ctrl> + c to quit"
-read answer3
-if [[ ( $answer3 == "n" ) ]]; then
-echo "user exit"
-exit
-else
-echo "Re-install docker..."
-fi
-
-## ddn.sh
-## quick install see https://getdocker.com for full install
-curl -fsSL https://get.docker.com -o get-docker.sh
-## dck.sh
-## check install versions upgrade
-docker compose version && docker version
-sudo apt-get upgrade -y && sudo apt-get update -y
-## dhi.sh
+## dhi.sh - docker hello verify install and status
 hello world 
+docker run hello-world
+docker ps
+docker volume ls
+docker networks ls
+docker images
+iptables
