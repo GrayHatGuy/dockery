@@ -10,7 +10,7 @@ _If you have suggestions for improvements commit your revisions to the repo and 
 ## Prerequisites
 Scripts that _**REMOVE DATA**_ are: _[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh) [drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_ and _[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_. 
 
-!!!Images and routes **WILL** be backed up BUT volume information _**WILL NOT !!!**_.  
+!!! Images and routes **WILL** be backed up BUT volume information _**WILL NOT **_!!!  
 
 To manually backup any critical volume data use these commands:
  
