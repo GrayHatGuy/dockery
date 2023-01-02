@@ -61,7 +61,7 @@ dcl.sh - #2 Cleans docker removes containers images then prunes network and volu
 
 drm.sh - #3 Removes **ALL** things docker including installation. **_WARNING: Data will be removed in this process!_**
 
-ddn.sh - #4 Quick install script for docker. Alternate full install manually at http://get.docker.com.
+ddn.sh - #4 Quick install script for docker. Alternate full install manually at http://getdocker.com.
 
 dck.sh - #5 Check docker engine and compose versions then apt update/upgrade run hello-world test then output a process list.
 
