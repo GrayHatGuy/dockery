@@ -8,7 +8,7 @@ The following scripts automate routine tasks associated with docker composition 
 _If you have suggestions for improvements commit your revisions to the repo and submit a push request for review and incorporation._
 
 ## Prerequisites
-Scripts that _**REMOVE DATA**_ are: _dcl.sh drm.sh_ and _dqd.sh_. Images and routes **WILL** be backed up volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
+Scripts that _**REMOVE DATA**_ are: _[dcl.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dcl.sh) [drm.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/drm.sh)_ and _[dqd.sh](https://github.com/GrayHatGuy/dockery/blob/main/bin/dqd.sh)_. Images and routes **WILL** be backed up BUT volume information _**WILL NOT**_.  To manually backup any critical volume data use these commands:
  
 	docker run -v /dbdata --name dbstore ubuntu /bin/bash
 	docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf ~/backup_volume.tar /dbdata
@@ -22,11 +22,6 @@ Creates directory for install and download repo.
 ```sudo ./dbu.sh ## short hand```
 OR if fail verify ~/dockery/bin is included in the path or use
 ```sudo bash ~/dockery/setup.sh```
-
-
-
-
-
 
 ## Usage
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
