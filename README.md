@@ -24,7 +24,7 @@ _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-fl
 ## Set-up
 Clone repo to $HOME
 
-	sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git
+	cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git
 	
 Run setup script
 
