@@ -50,12 +50,12 @@ Verify shortcuts are active by typing the script alias: ```dhi```
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and* reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
 *
 #### **To run scripts #1 to #5 separately use the form below.**
-- Script #1 dbu.sh shown as an example. ```. dbu.sh``` or alternate ```sudo bash /$HOME/dockery/bin/dbu.sh```
+- Script #1 dbu.sh shown as an example as alias ```dbu``` or alternates ```. dbu.sh``` ```sudo bash /$HOME/dockery/bin/dbu.sh```
 	
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 
-- Null flag - Prompt user before data removal [""] ```. ddq.sh``` or alternate ```sudo bash ~/dockery/dqd.sh ## literal path```
+- Null flag - Prompt user before data removal [""] with alias ```ddq``` or alternate ```. ddq.sh``` ```sudo bash ~/dockery/dqd.sh ## literal path```
 - -y flag - Accept data removal without prompts [-y] ```. ddq.sh -y``` or alternate ```sudo bash ~/dockery/dqd.sh -y```
 - -n flag - Bypass data removal and prompts [-n] ```. dqd.sh -n``` or alternate ```sudo bash ~/dockery/dqd.sh -n ## literal path```
 	
