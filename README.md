@@ -29,7 +29,7 @@ Clone repo to $HOME
 Run setup script
 
 	chmod u+x ~/dockery/setup.sh
-	sudo bash ~/dockery/setup.sh
+	sudo bash ~/dockery/bin/setup.sh
 
 Add script to aliases
 - Method 1 - Update .bashrc with alias using script.
