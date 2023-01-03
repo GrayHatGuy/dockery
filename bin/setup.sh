@@ -2,7 +2,6 @@
 ## ~/dockery/setup.sh
 echo "Starting "   
 echo "Updating script to executable set PATH with ~/dockery/bin/ adding aliases to .bashrc"
-sudo bash ~/dockery/bin/alias.sh
 sudo chmod u+x ~/dockery/bin/*.sh
 export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc 
 retVal=$?

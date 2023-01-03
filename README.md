@@ -25,10 +25,16 @@ _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-fl
 Clone repo to $HOME
 ```sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git```
 
-Change to executable and run setup script
+Run setup script
 ```chmod u+x ~/dockery/setup.sh```
 ```sudo bash ~/dockery/setup.sh```
-NNNNN
+Add script to aliases
+- Method 1 - Update .bashrc with alias using script.
+```sudo bash ~/dockery/bin/alias.sh```
+- Method 2 - If you are currently not using aliases the copy the example .bash_alias included to $HOME ```sudo cp ~/dockery/.bash_alias ~/``` 
+- Method 3 - If you are using .bash_alias append the aliases listed in the .bash_alias example ```sudo nano .bash_alias```
+
+```sudo bash ~/dockery/bin/alias.sh```
 
 If script fails add scripts to path and make them executable.
 ```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc``` 
