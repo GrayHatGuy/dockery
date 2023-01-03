@@ -1,19 +1,14 @@
-#!/bash/bin
-## go $HOME
-cd ~/
-## clone git
-## git clone https://github.com/GrayHatGuy/dockery.git
-## echo "cloned dockery"
-## add $PATH
-if [ -d "$HOME/bin" ] ; then
-  PATH="$PATH:$HOME/dockery/bin"
-  echo "dockery setup pass added to $PATH"
-else
-  echo "dockery setup failed download git git clone https://github.com/GrayHatGuy/dockery.git and update path to /dockery/bin"
-fi
+#!/bin/bash
+## ~/dockery/setup.sh
+echo "Starting " $(basename) 
+echo "Updating PATH with ~/dockery/bin/ "
+export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc && echo "Changing scripts to executable" && chmod u+x ~/dockery/bin/*.sh
 retVal=$?
 if [ $retVal -ne 0 ]; then
 echo "Error"
 else
-echo "Completed"
+echo "Setup Completed"
+echo "logout to finish update to $PATH"
 fi
+echo $basename
+exit $retVal

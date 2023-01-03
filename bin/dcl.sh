@@ -4,7 +4,6 @@ echo "Starting " $(basename)
 echo "Clearing docker do you wish to continue? y/n" && read abort1
 if [[ ( $abort1 == "n" ) ]]; then
 echo "good bye."
-exit 1
 else
 echo "*User requested docker clear.*"
 ## dcl.sh clear docker stop containers remove images prune network and volumes
@@ -16,4 +15,4 @@ else
 echo "Completed"
 fi
 echo $basename
-exit $retVal
+echo "returned "$retVal

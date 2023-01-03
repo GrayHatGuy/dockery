@@ -9,4 +9,4 @@ else
 echo "Completed"
 fi
 echo $basename
-exit $retVal
+echo "returned "$retVal

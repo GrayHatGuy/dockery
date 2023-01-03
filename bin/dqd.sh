@@ -15,7 +15,6 @@ while getopts 'yn:' OPTION; do
       ;;
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
-      exit 1
       ;;
   esac
 done
@@ -23,7 +22,7 @@ done
 echo "create backup directory in ~/dockbkup for images and routes" ; sudo cd ~/ & mkdir /dockbkup ; cd /dockbkup && sudo mkdir img && cd .. ; mkdir routes ; docker save $(docker images -q) -o ~/dockbkup/img/dockerimages`date +%d%b%Y`.tar ; iptables-save > ~/dockbkup/img/savedrules`date +%d%b%Y`.txt && echo "Images and routes are backed up to ~/dockbkup/"
 retVal=$?
 if [ $retVal -ne 0 ]; then
-echo "Error"
+echo "Error"  
 else
 echo "Completed"
 fi
@@ -50,16 +49,14 @@ while getopts 'yn:' OPTION; do
       echo "user clearing docker..." ; docker container stop $(docker container ls -aq) && docker container rm -f $(docker container ls -aq) && docker rmi -f $(docker images -aq) && docker volume prune && docker network prune && echo "...cleared!" ; docker ps
       retVal=$?
       if [ $retVal -ne 0 ]; then
-      echo "Error"
+      echo "Error" 
       else
       echo "Completed"
       fi
-      exit $retVal
       fi
       ;;
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
-      exit 1
       ;;
   esac
 done
@@ -74,7 +71,6 @@ while getopts 'yn:' OPTION; do
       else
       echo "Completed"
       fi
-      exit $retVal
       ;;
     n)
       echo "*-n flag skipping docker nuke and reinstall*"
@@ -88,16 +84,14 @@ while getopts 'yn:' OPTION; do
       echo "*user select docker nuke* Now nuking docker..." ; sudo dpkg -l | grep -i docker ; sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli docker-compose-plugin && sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-compose-plugin sudo rm -rf /var/lib/docker /etc/docker && sudo rm /etc/apparmor.d/docker && sudo groupdel docker && sudo rm -rf /var/run/docker.sock && echo "...nuked!" ; echo "re-installing..." ; sudo apt-get update -y && sudo apt-get upgrade -y ; sudo curl -fsSL https://get.docker.com -o get-docker.sh && sudo bash get-docker.sh && sudo apt-get upgrade -y && sudo apt-get update -y ; sudo usermod -aG docker $USER ; sudo systemctl enable docker.service && sudo systemctl enable containerd.service && echo "docker installed!"
       retVal=$?
       if [ $retVal -ne 0 ]; then
-      echo "Error"
+      echo "Error" 
       else
       echo "Completed"
       fi
-      exit $retVal
       fi
       ;;
     ?)
       echo "script flag does not exist see usage: $(basename \$0) [-y] [-n]" >&2
-      exit 1
       ;;
   esac
 done
@@ -106,11 +100,10 @@ echo "Hello-world starting rn..."
 docker run hello-world 
 retVal=$?
 if [ $retVal -ne 0 ]; then
-echo "Error"
+echo "Error" 
 else
 echo "Completed"
 fi
-exit $retVal
 ## dok.sh - docker install status check
 docker ps && docker images && docker volume ls && docker networks ls && sudo iptables -L  
 retVal=$?
@@ -119,5 +112,5 @@ echo "Error"
 else
 echo "Completed"
 fi
-echo $basename
-exit $retVal
+echo $basename 
+echo returned $retVal 

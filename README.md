@@ -22,18 +22,26 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost .
 _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-flag-usage) for data removal script flagsl._
 
 ## Set-up
-Creates directory for install and download repo. 
-```sudo ./dbu.sh ## short hand```
-OR if fail verify ~/dockery/bin is included in the path or use
+Clone repo to $HOME
+```sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git```
+
+Change to executable and run setup script
+```chmod u+x ~/dockery/setup.sh```
 ```sudo bash ~/dockery/setup.sh```
 
-## Usage
-Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
+If script fails add scripts to path and make them executable.
+```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc``` 
+```chmod u+x ~/dockery/bin/*.sh```
 
+	_Log out for changes to be incorporated_
+
+## Usage
+Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and* reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
+*
 #### **To run scripts #1 to #5 separately use the form below.**
 _Script #1 dbu.sh shown as an example._
 	
-	sudo bash ./dbu.sh ## short path
+	. dbu.sh ## short path
 
 ##### OR	
 	
@@ -42,25 +50,25 @@ _Script #1 dbu.sh shown as an example._
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 
-#### Omitted flag - Prompt user before data removal [""]
+#### Null flag - Prompt user before data removal [""]
 	
-	sudo ./ddq.sh ## short path
+	. ddq.sh ## short path
 	
 ##### OR
 	
 	sudo bash ~/dockery/dqd.sh ## literal path
 	
-#### Yes flag - Accept data removal without prompts [-y]
+#### -y flag - Accept data removal without prompts [-y]
 	
-	sudo ./ddq.sh -y ## short path
+	. ddq.sh -y ## short path
 	
 ##### OR
 	
 	sudo bash ~/dockery/dqd.sh -y ## literal path
 	
-#### No flag - Bypass data removal and prompts [-n]
+#### -n flag - Bypass data removal and prompts [-n]
 	
-	sudo bash ./dqd.sh -n ## short path
+	. dqd.sh -n ## short path
 	
 ##### OR
 
