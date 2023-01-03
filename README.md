@@ -40,7 +40,7 @@ Add script to aliases
 	```sudo cp ~/dockery/.bash_alias ~/``` 
 - Method 3 - If you are using .bash_alias append the aliases listed in the [.bash_aliases](https://github.com/GrayHatGuy/dockery/blob/main/.bash_aliases) example 
 
-	```sudo nano .bash_alias```
+	```sudo nano .bash_aliases```
 
 	_Log out for changes to be incorporated_
 	
