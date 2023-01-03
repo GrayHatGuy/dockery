@@ -24,12 +24,12 @@ _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-fl
 ## Set-up
 Clone repo to $HOME
 
-	```sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git```
+	sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git
 	
 Run setup script
 
-	```chmod u+x ~/dockery/setup.sh```
-	```sudo bash ~/dockery/setup.sh```
+	```chmod u+x ~/dockery/setup.sh
+	sudo bash ~/dockery/setup.sh```
 
 Add script to aliases
 - Method 1 - Update .bashrc with alias using script.
