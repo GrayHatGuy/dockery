@@ -28,6 +28,7 @@ Clone repo to $HOME
 Change to executable and run setup script
 ```chmod u+x ~/dockery/setup.sh```
 ```sudo bash ~/dockery/setup.sh```
+NNNNN
 
 If script fails add scripts to path and make them executable.
 ```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc``` 
