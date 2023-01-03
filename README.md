@@ -55,9 +55,9 @@ Typical use of the scripts is to execute common docker housekeeping routines for
 ### Script flag usage
 #### **To run the docker nuke sequence per dqd.sh use the following syntax for data removal prompts:**
 
-- Null flag - Prompt user before data removal [""] with alias ```ddq``` or alternate ```. ddq.sh``` ```sudo bash ~/dockery/dqd.sh ## literal path```
-- -y flag - Accept data removal without prompts [-y] ```. ddq.sh -y``` or alternate ```sudo bash ~/dockery/dqd.sh -y```
-- -n flag - Bypass data removal and prompts [-n] ```. dqd.sh -n``` or alternate ```sudo bash ~/dockery/dqd.sh -n ## literal path```
+- Null flag - Prompt user before data removal [""] with alias ```dqd``` or alternate ```. ddq.sh``` ```sudo bash ~/dockery/dqd.sh```
+- -y flag - Accept data removal without prompts [-y] with alias ```dqdy``` or alternate ```. ddq.sh -y``` ```sudo bash ~/dockery/dqd.sh -y```
+- -n flag - Bypass data removal and prompts [-n] with alias ```dqdn``` or alternate ```. dqd.sh -n``` ```sudo bash ~/dockery/dqd.sh -n```
 	
 ## Details
 Scripts can be ran individually or in custom sequences. 
