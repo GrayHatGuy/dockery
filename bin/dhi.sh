@@ -1,6 +1,6 @@
 #!/bin/bash
 ## ~/dockery/bin/dhi.sh
-echo "Starting " $(basename)
+echo "Starting "  
 ## dck.sh - docker hello world
 echo "Hello-world status starting rn..." ; docker run hello-world ; echo "Run status update?" ; read status
 if [[ ( $status == "n" ) ]]; then
@@ -14,5 +14,4 @@ echo "Error"
 else
 echo "Completed"
 fi
-echo $basename
 echo "returned "$retVal

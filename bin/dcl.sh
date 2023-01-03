@@ -1,7 +1,6 @@
 #!/bin/bash
 ## ~/dockery/bin/dcl.sh
-echo "Starting " $(basename) 
-echo "Clearing docker do you wish to continue? y/n" && read abort1
+echo "Starting " && echo "Clearing docker do you wish to continue? y/n" && read abort1
 if [[ ( $abort1 == "n" ) ]]; then
 echo "good bye."
 else
@@ -14,5 +13,4 @@ echo "Error"
 else
 echo "Completed"
 fi
-echo $basename
-echo "returned "$retVal
+fi

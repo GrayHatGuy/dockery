@@ -22,18 +22,26 @@ _The above opens a container volume /dbdata on dbstore for backup to localhost .
 _See [Usage](https://github.com/GrayHatGuy/dockery/blob/main/README.md#script-flag-usage) for data removal script flagsl._
 
 ## Set-up
-Clone repo to $HOME
-```sudo cd ~/ && git clone https://github.com/GrayHatGuy/dockery.git```
+Clone repo to $HOME ```sudo cd $HOME && git clone https://github.com/GrayHatGuy/dockery.git```
 
-Change to executable and run setup script
-```chmod u+x ~/dockery/setup.sh```
-```sudo bash ~/dockery/setup.sh```
+Set up with script ```sudo bash ~/dockery/bin/setup.sh```
 
-If script fails add scripts to path and make them executable.
-```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc``` 
-```chmod u+x ~/dockery/bin/*.sh```
+Set up using CLI
+	Change to scripts executable add path add.
+	```chmod u+x ~/dockery/bin/*.sh```
+	```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc```
+	```export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc```
 
-	_Log out for changes to be incorporated_
+	Add aliases shortcuts
+
+	If you are using .bash_alias append it with .bash_alias included in the repo using ```sudo nano ~/.bash_alias``` 
+	if you are not using aliases just copy to $HOME ```cp ~/dockery/.bash_alias ~/``` 
+
+	If aliases are not available append to .bashrc with this script: ```sudo bash ~/dockery/bin/alias.sh```
+
+		_Log out for changes to be incorporated_
+
+Try a test command. ```dhi```
 
 ## Usage
 Typical use of the scripts is to execute common docker housekeeping routines for status checks, backup, clearing/sweeping, install removal/purge, and install individually or e excuted sequentially in a single script to nuke all things docker and* reinstall.  The scripts make use of a simple 3-letter shell command for execution as opposed to the mulitline commands required to executed the housekeeping routines.  
