@@ -4,6 +4,7 @@ echo "Starting "
 echo "Updating script to executable set PATH with ~/dockery/bin/ adding aliases to .bashrc"
 sudo chmod u+x ~/dockery/bin/*.sh
 export PATH="~/dockery/bin/:$PATH" >> ~/.bashrc 
+export ~/dockery/bin/.bashrc_aliases >> ~/.bashrc
 retVal=$?
 if [ $retVal -ne 0 ]; then
 echo "Error"
