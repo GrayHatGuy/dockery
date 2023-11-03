@@ -28,7 +28,7 @@ Clone repo to $HOME
 	
 Run setup script sudo ```bash ~/dockery/bin/setup.sh```
 
-<OR>
+	OR
 
 Manually add aliases
 - Method 1 - Update .bashrc with alias using script.
